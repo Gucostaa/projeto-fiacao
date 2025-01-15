@@ -41,3 +41,5 @@ function duplicateImages() {
 // Inicializa o carrossel e começa a duplicação
 duplicateImages();
 autoMoveSlide();
+
+
