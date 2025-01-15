@@ -1,0 +1,157 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", serif;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between; /* Alinha logo à esquerda e o menu ao centro */
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave no menu */
+}
+
+.logo img {
+    height: 150px;  /* Garante que a altura da logo será ajustada automaticamente */
+    width: 350px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;  /* Centraliza os itens do menu */
+    flex-grow: 0.5;  /* Permite que o menu ocupe o espaço restante */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;  /* Alinha verticalmente os itens do menu com a logo */
+    gap: 15px; /* Espaço entre os itens do menu */
+    margin: 0;
+    flex-grow: 1; /* Permite que a lista ocupe todo o espaço disponível */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+/* Estilo do menu */
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 23px;
+    padding: 8px 18px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;  /* Transições para os outros itens */
+    border-radius: 32px;
+}
+
+/* Efeito hover para os itens do menu */
+nav ul li a:hover {
+    background-color: #29a40f;  /* Cor verde mais intensa */
+    color: white;  /* Altera a cor do texto para branco */
+    box-shadow: 0 10px 30px rgba(82, 82, 82, 0.2);
+  /* Sombra mais suave e difusa */
+    transform: scale(1.05);  /* Um leve aumento no tamanho do link ao passar o mouse */
+}
+
+/* Alinha o item "Contatos" à direita */
+nav ul li:last-child {
+    margin-left: auto;  /* Empurra o último item (Contatos) para a direita */
+}
+
+/* Tornar a cor de hover sempre ativa no "Contatos" */
+nav ul li:last-child a {
+    background-image: linear-gradient(#70c700, #00b600);  /* Cor verde do hover */
+    color: white;  /* Cor do texto branco */
+    transform: scale(1.05);  /* Efeito de aumento */
+    transition: none;  /* Remove transições para o "Contatos" */
+}
+
+
+/* Carrossel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel img {
+    width: calc(100% - 64px); /* 100% de largura menos o total da margem (32px de cada lado) */
+    height: 600px;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin: 32px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(82, 82, 82, 0.2);
+}
+
+button {
+    display: none; /* Remove os botões */
+}
+
+
+/* Estilização geral das seções */
+#secoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espaçamento entre as seções */
+    padding: 40px;
+    margin: 20px 0;
+    flex-wrap: wrap; /* Garante que as seções irão se ajustar conforme o espaço disponível */
+}
+
+.secao {
+    width: 400px;  /* Define a largura fixa para as seções */
+    height: 600px; /* Define a altura fixa para as seções */
+}
+
+.content-box {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto; /* Permite rolagem se o conteúdo for maior que a altura */
+    height: 100%; /* Garante que a altura da caixa de conteúdo ocupe 100% da altura da seção */
+}
+
+/* Estilos específicos para cada seção */
+#sobre .content-box {
+    background-color: #e0f7fa; /* Cor personalizada para a seção "Sobre Nós" */
+}
+
+#qualidade .content-box {
+    background-color: #f1f8e9; /* Cor personalizada para a seção "Qualidade" */
+}
+
+#sustentabilidade .content-box {
+    background-color: #fce4ec; /* Cor personalizada para a seção "Sustentabilidade" */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #secoes {
+        flex-direction: column; /* As seções ficam empilhadas em telas menores */
+        align-items: center;
+    }
+
+    .secao {
+        width: 100%;  /* A largura será 100% da tela em dispositivos menores */
+        max-width: 400px; /* Limita a largura para não ultrapassar 400px */
+    }
+}
