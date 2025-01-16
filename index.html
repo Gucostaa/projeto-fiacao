@@ -6,37 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS\style.css">
     <title>Fiação São Paulo</title>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="Icons and Images/fiacaologo5.png" alt="Logo da Empresa">
-        </div>
         <nav>
             <ul>
-                <li><a href="#sobre">Sobre nós</a></li>
-                <li><a href="#qualidade">Qualidade</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#cores">Cores</a></li>
+                <li><a href="#home">Home</a></li>
+                <li class="submenu"><a href="#aempresa">A Empresa</a>
+                    <ul class="subitems">
+                        <li><a href="#sobre-nos"><img src="images/fiacao.png" alt="Sobre nós"> Sobre Nós</a></li>
+                        <li><a href="#grupo-patamute"><img src="images/patamutelogo2.png" alt="Grupo Patamute"> Grupo Patamute</a></li>
+                    </ul>
+                </li>                
+                <li class="submenu"><a href="#produtos">Produtos</a>
+                    <ul class="subitems">
+                        <li><a href="#cartelas"><img src="images/cartela.png" alt="cartelas"> Cartela de Cores</a></li>
+                        <li><a href="#tecelagens"><img src="images/tecelagem.png" alt="tecelagems"> Tecelagem</a></li>
+                        <li><a href="#malharias"><img src="images/malharia.png" alt="malharias"> Malharia</a></li>
+                        <li><a href="#barbantes"><img src="images/barbante.png" alt="barbantes"> Barbantes</a></li>
+                    </ul>
+                </li>
                 <li><a href="#materiaprima">Matéria Prima</a></li>
-                <li><a href="#contato">Contatos</a></li>
+                <li class="contatos"><a href="#faleconosco">Fale Conosco</a></li>
             </ul>
         </nav>
+        
+        <div class="circulos">
+            <div class="circulo" id="localizacao">
+                <i class="fas fa-map-marker-alt"></i> <!-- Ícone de localização -->
+                <div class="info">Rua Exemplo, 123</div>
+            </div>
+            <div class="circulo" id="email">
+                <i class="fas fa-envelope"></i> <!-- Ícone de email -->
+                <div class="info">email@exemplo.com</div>
+            </div>
+            <div class="circulo" id="telefone">
+                <i class="fas fa-phone-alt"></i> <!-- Ícone de telefone -->
+                <div class="info">+55 11 91234-5678</div>
+            </div>
+        </div>
+
     </header>
 
+    <div class="header-logo">
+        <div class="background-logo">
+            <img src="images/header-background.png" alt="header-background">
+        </div>
+        <div class="logo">
+            <img src="images/fiacaologo5.png" alt="fiacaologo">
+        </div>
+    </div>    
+    
     <!-- Carrossel de Imagens -->
-
     <section class="carousel-container">
         <div class="carousel">
-            <img src="Icons and Images/fiacaoimagem1.jpg" alt="Imagem 1">
-            <img src="Icons and Images/fiacaoimagem2.jpg" alt="Imagem 2">
-            <img src="Icons and Images/fiacaoimagem3.jpg" alt="Imagem 3">
-            <img src="Icons and Images/fiacaoimagem4.jpg" alt="Imagem 4">
-            <img src="Icons and Images/fiacaoimagem5.jpg" alt="Imagem 5">
-            <img src="Icons and Images/fiacaoimagem6.jpg" alt="Imagem 6">
+            <img src="Images/fiacaoimagem1.jpg" alt="Imagem 1">
+            <img src="Images/fiacaoimagem2.jpg" alt="Imagem 2">
+            <img src="Images/fiacaoimagem3.jpg" alt="Imagem 3">
+            <img src="Images/fiacaoimagem4.jpg" alt="Imagem 4">
+            <img src="Images/fiacaoimagem5.jpg" alt="Imagem 5">
+            <img src="Images/fiacaoimagem6.jpg" alt="Imagem 6">
         </div>
     </section>
 
