@@ -1,0 +1,574 @@
+/*==================================
+
+  Estilos Globais
+
+====================================*/
+
+
+
+/* Importa a fonte Urbanist do Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap');
+
+
+
+/* Definição de variáveis CSS para facilitar a manutenção */
+
+:root {
+
+    /* Cores */
+
+    --primary-text-color: #2c3e50;
+
+    --secondary-text-color: #7f8c8d;
+
+    --background-color: #f4f7f9;
+
+    --card-bg: #ffffff;
+
+    --border-color: #ecf0f1;
+
+    --shadow-color: rgba(0, 0, 0, 0.05);
+
+
+
+    /* Cores dos ícones */
+
+    --blue-icon-bg: #3498db;
+
+    --gray-icon-bg: #95a5a6;
+
+    --green-icon-bg: #2ecc71;
+
+    --orange-icon-bg: #f39c12;
+
+    --purple-icon-bg: #9b59b6;
+
+    --darkblue-icon-bg: #34495e;
+
+
+
+    /* Cores dos status e botão */
+
+    --yellow-badge-bg: #f1c40f;
+
+    --yellow-badge-text: #2c3e50;
+
+    --gray-badge-bg: #bdc3c7;
+
+    --gray-badge-text: #4a4a4a;
+
+    --highlight-border: #f39c12;
+
+    --highlight-button-bg: #f39c12;
+
+    --highlight-button-hover: #e67e22;
+
+
+
+    /* Espaçamento */
+
+    --gap-spacing: 25px;
+
+    --main-padding: 20px;
+
+}
+
+
+
+/* Estilos de corpo e reset */
+
+body {
+
+    width: 100%;
+
+    margin: 0;
+
+    font-family: 'Urbanist', sans-serif;
+
+    color: var(--primary-text-color);
+
+    background-color: var(--background-color);
+
+    line-height: 1.6;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 100vh;
+
+}
+
+
+
+/*==================================
+
+  Header
+
+====================================*/
+
+
+
+.header {
+
+    /* Adicionado a imagem de fundo no CSS */
+
+    background-image: url('../images/header-background2.png');
+
+    /* Controla o tamanho da imagem de fundo */
+
+    background-size: 350px;
+
+    background-position: left;
+
+    background-repeat: no-repeat;
+
+    background-color: var(--header-footer-bg);
+
+    border-bottom: 1px solid var(--border-color);
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    position: relative;
+
+    padding: 1rem 5rem 1rem 15rem;
+    box-sizing: border-box;
+
+    /* Garante que o padding não cause overflow */
+}
+
+
+
+.logo-img {
+
+    max-height: 125px;
+
+    width: auto;
+
+    object-fit: contain;
+
+}
+
+
+
+/*==================================
+
+  Main Dashboard Content
+
+====================================*/
+
+
+
+.dashboard-content {
+
+    flex-grow: 1;
+    /* Permite que o conteúdo principal ocupe o espaço restante */
+
+    max-width: 1200px;
+
+    width: 100%;
+
+    margin: var(--main-padding) auto;
+
+    padding: 0 var(--main-padding);
+
+}
+
+
+
+.dashboard-header {
+
+    margin-bottom: 40px;
+
+}
+
+
+
+.dashboard-title {
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+
+    color: var(--primary-text-color);
+
+}
+
+
+
+.dashboard-subtitle {
+
+    font-size: 16px;
+
+    color: var(--secondary-text-color);
+
+    margin-top: 0;
+
+}
+
+
+
+/*==================================
+
+  Cards
+
+====================================*/
+
+.cardimg1 {
+    background-image: url('../images/1.png');
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cardimg2 {
+    background-image: url('../images/2.png');
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.cardimg3 {
+    background-image: url('../images/3.png');
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cardimg4 {
+    background-image: url('../images/4.png');
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cardimg5 {
+    background-image: url('../images/5.png');
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cardimg6 {
+    background-image: url('../images/6.png');
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.cards-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: var(--gap-spacing);
+
+}
+
+
+
+.card {
+    background-color: var(--card-bg);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    box-shadow: 0 4px 10px var(--shadow-color);
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    text-decoration: none;
+    /* Garante que os cards não tenham underline */
+
+    color: inherit;
+    /* Herda a cor do texto padrão */
+
+}
+
+
+
+.card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+.highlighted-card {
+
+    border: 2px solid var(--highlight-border);
+
+}
+
+
+
+.card-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.card-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #fff;
+
+    font-size: 24px;
+
+}
+
+
+
+/* Classes de cores para os ícones */
+
+.blue-bg {
+    background-color: var(--blue-icon-bg);
+}
+
+.gray-bg {
+    background-color: var(--gray-icon-bg);
+}
+
+.green-bg {
+    background-color: var(--green-icon-bg);
+}
+
+.orange-bg {
+    background-color: var(--orange-icon-bg);
+}
+
+.purple-bg {
+    background-color: var(--purple-icon-bg);
+}
+
+.darkblue-bg {
+    background-color: var(--darkblue-icon-bg);
+}
+
+
+
+.status-badge {
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    padding: 4px 12px;
+
+    border-radius: 20px;
+
+    text-transform: uppercase;
+
+}
+
+
+
+.yellow-badge {
+
+    background-color: var(--yellow-badge-bg);
+
+    color: var(--yellow-badge-text);
+
+}
+
+
+
+.gray-badge {
+
+    background-color: var(--gray-badge-bg);
+
+    color: var(--gray-badge-text);
+
+}
+
+
+
+.card-title {
+
+    font-size: 18px;
+    text-align: center;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    color: white;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+
+
+.card-description {
+
+    font-size: 14px;
+
+    color: white;
+
+    margin: 0;
+
+    flex-grow: 1;
+    /* Ocupa o espaço restante para alinhar o rodapé */
+
+}
+
+
+
+.card-footer {
+
+    margin-top: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+    /* Alinha o conteúdo à esquerda */
+
+}
+
+
+
+.access-button {
+
+    background-color: var(--highlight-button-bg);
+
+    color: #fff;
+
+    font-weight: 600;
+
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    transition: background-color 0.2s ease;
+
+    width: 100%;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+}
+
+
+
+.access-button:hover {
+
+    background-color: var(--highlight-button-hover);
+
+}
+
+
+
+/*==================================
+
+  Rodapé
+
+====================================*/
+
+
+
+.footer {
+
+    background-color: #1f1f1f;
+
+    padding: 1.5rem 2rem;
+
+    text-align: center;
+
+    color: #888888;
+
+    font-size: 0.9rem;
+
+    font-weight: 500;
+
+    margin-top: auto;
+    /* Empurra o rodapé para o final da página */
+
+}
+
+
+
+/*==================================
+
+  Responsividade
+
+====================================*/
+
+
+
+@media (max-width: 768px) {
+
+    .dashboard-title {
+
+        font-size: 24px;
+
+    }
+
+    .cards-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    @media (max-width: 768px) {
+    .header {
+        /* Centraliza o cabeçalho em telas pequenas */
+        justify-content: center;
+        padding: 0.5rem 1rem;
+        
+        /* Ajustes para o background em telas pequenas */
+        background-size: 175px;
+        background-position: left;
+    }
+
+    .logo-img {
+
+        height: 80px;
+
+    }
+
+}
+
+}
